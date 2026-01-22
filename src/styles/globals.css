@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-cream: #faf8f5;
+  --color-gold: #E9C46A;
+  --color-gold-light: #f0d485;
+  --color-charcoal: #264653;
+  --color-charcoal-light: #2a9d8f;
+  
+  /* Typography */
+  --font-family-sans: system-ui, -apple-system, sans-serif;
+  --font-family-serif: "Playfair Display", Georgia, serif;
+  
+  /* Shadows */
+  --shadow-luxury: 0 4px 20px rgba(38, 70, 83, 0.08);
+  --shadow-luxury-lg: 0 10px 40px rgba(38, 70, 83, 0.12);
+}
+
+@layer base {
+  @font-face {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v36/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQZNLo_U2r.woff2) format('woff2');
+  }
+  
+  * {
+    @apply border-charcoal/10;
+  }
+  
+  body {
+    @apply bg-white text-charcoal antialiased;
+    font-family: var(--font-family-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+    @apply text-charcoal;
+  }
+  
+  h1 {
+    @apply text-6xl md:text-8xl;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-6xl;
+    letter-spacing: -0.01em;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h4 {
+    @apply text-2xl md:text-3xl;
+  }
+}
